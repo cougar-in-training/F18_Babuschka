@@ -1,0 +1,92 @@
+.templatemodtager {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	margin: 0 auto;
+	grid-gap: 20px;
+}
+
+.menu {
+	border: 1px solid #666;
+	padding: 10px;
+	background-color: black;
+}
+
+h2,
+p {
+	color: floralwhite;
+}
+
+
+/* MOBILE FIRST*/
+
+/*portrait*/
+
+@media screen and (min-width:360px) and (orientation:portrait) {
+	.templatemodtager {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+
+}
+
+/*landscape*/
+
+@media screen and (min-width:360px) and (max-width:627px) and (orientation:landscape) {
+	.templatemodtager {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+
+}
+
+/*IPAD*/
+
+/*landscape*/
+
+@media screen and (min-width:628px) and (max-width:1024px) and (orientation:landscape) {
+	.templatemodtager {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.menu {
+		margin: 0 auto;
+	}
+}
+
+/*portrait*/
+
+@media screen and (min-width: 676px) {
+	.templatemodtager {
+		grid-template-columns: repeat(2, 1fr);
+
+	}
+	.menu {
+		margin: 0 auto;
+	}
+}
+
+/*DESKTOP*/
+
+/*landscape*/
+
+@media screen and (min-width:1025px) and (orientation:landscape) {
+	.templatemodtager {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.menu {
+		margin: 0 auto;
+	}
+}
+
+/*landscape Retina*/
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1025px),
+screen and (min-resolution: 192dpi) and (min-width: 1025px) {
+	.templatemodtager {
+		grid-template-columns: repeat(2, 1fr);
+
+	}
+	.menu {
+		margin: 0 auto;
+	}
+}
